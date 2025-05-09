@@ -1,0 +1,14 @@
+  server:
+    port: 8000
+  
+  routes:
+    users:
+      path: "/api/users"
+      serviceUrl: "http://localhost:8081"
+    tickets:
+      path: "/api/tickets"
+      serviceUrl: "http://localhost:8082"
+  
+  cors:
+    allowedOrigins: ["http://localhost:3000"]
+  
