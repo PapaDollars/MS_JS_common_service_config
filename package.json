@@ -2,17 +2,19 @@
   "name": "service-config",
   "version": "1.0.0",
   "description": "Service de configuration centralisée",
-  "main": "server.js",
+  "main": "src/server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
   },
   "dependencies": {
-    "express": "^4.18.2",
     "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "fs-extra": "^11.1.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
     "js-yaml": "^4.1.0",
-    "nodemon": "^3.0.1"
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }

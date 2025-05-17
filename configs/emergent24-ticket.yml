@@ -1,0 +1,28 @@
+common:
+  server:
+    port: 8082
+  
+  datasource:
+    url: jdbc:mysql://localhost:3306/tiket-bd
+    username: root
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  
+  user-service:
+    url: http://service-proxy/api/users
+
+profiles:
+  development:
+    logging:
+      level: DEBUG
+  
+  production:
+    logging:
+      level: INFO
+    jpa:
+      show-sql: false

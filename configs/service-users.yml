@@ -1,0 +1,25 @@
+common:
+  server:
+    port: 8081
+  
+  datasource:
+    url: jdbc:mysql://localhost:3306/emergent-service-user
+    username: root
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+profiles:
+  development:
+    logging:
+      level: DEBUG
+  
+  production:
+    logging:
+      level: INFO
+    jpa:
+      show-sql: false

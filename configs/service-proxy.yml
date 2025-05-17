@@ -1,0 +1,27 @@
+common:
+  server:
+    port: 8080
+  
+  routes:
+    - id: service-users
+      uri: lb://service-users
+      predicates:
+        - Path=/api/users/**
+      filters:
+        - StripPrefix=0
+    
+    - id: emergent24-ticket
+      uri: lb://emergent24-ticket-backend
+      predicates:
+        - Path=/api/tickets/**
+      filters:
+        - StripPrefix=0
+
+profiles:
+  development:
+    logging:
+      level: DEBUG
+  
+  production:
+    logging:
+      level: INFO
