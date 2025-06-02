@@ -1,0 +1,31 @@
+{
+  "name": "service-proxy",
+  "properties": {
+    "routes": [
+      {
+        "id": "auth-service",
+        "uri": "http://localhost:8082",
+        "predicates": [
+          "Path=/api/auth/**"
+        ],
+        "filters": []
+      },
+      {
+        "id": "user-service",
+        "uri": "http://localhost:8081",
+        "predicates": [
+          "Path=/api/users/**"
+        ],
+        "filters": []
+      },
+      {
+        "id": "ticket-service",
+        "uri": "http://localhost:8082",
+        "predicates": [
+          "Path=/api/tickets/**"
+        ],
+        "filters": []
+      }
+    ]
+  }
+} 
