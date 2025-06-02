@@ -7,7 +7,7 @@ const configRoutes = require('./routes/config.routes');
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 8001;
+const PORT = process.env.PORT || 8888;
 
 // Configuration du logger
 const logger = winston.createLogger({
